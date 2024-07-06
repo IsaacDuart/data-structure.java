@@ -23,4 +23,25 @@ public class Vector {
         copy an primitive type vector, and, just like
         it, can take a number to be its capacity.
     */
+    
+    public void add(String element){
+        for(int i =0; i < this.elements.length; i++){
+        if(this.elements[i] ==null){
+            this.elements[i] = element;
+            break;
+            }
+        }
+        
+        /*
+        This method takes an element String and adds
+        it at the elements vector if elements[i] 
+        == null.
+            
+            It reads all elements in the elements vector
+            and break if finds an null element.
+        */
+        
+      
+    }
+    
 }
