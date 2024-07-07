@@ -64,9 +64,16 @@ public class Vector {
         s.append("]");
         
         return s.toString();
+       
     }
     
-    
+    public String search(int position){
+        if(!(position >=0 && position < this.size)){
+            throw new IllegalArgumentException("Invalid Position");
+        }
+        return this.elements[position];
+        
+    }
         
       
     
