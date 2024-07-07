@@ -10,9 +10,11 @@ package datastructure.vectors;
  */
 public class Vector {
     private String[] elements;
+    private int size;
     
     public Vector(int capacity){
         this.elements = new String[capacity];
+        this.size = 0;
     }
     /*
     - We added a "Vector" construtctor that 
@@ -24,24 +26,24 @@ public class Vector {
         it, can take a number to be its capacity.
     */
     
-    public void add(String element){
-        for(int i =0; i < this.elements.length; i++){
-        if(this.elements[i] ==null){
-            this.elements[i] = element;
-            break;
-            }
+    public void add(String element) throws Exception{
+        
+        if(this.size < this.elements.length){
+        this.elements[this.size] = element;
+        this.size++;
+        } else {
+            throw new Exception("The vector has no more storage");
+        }
         }
         
         /*
-        This method takes an element String and adds
-        it at the elements vector if elements[i] 
-        == null.
-            
-            It reads all elements in the elements vector
-            and break if finds an null element.
+        For simplify and turn the algorithm faster, we
+        added an integer size as atribute for mark the last
+        position. Size starts at 0 because the vector first
+        position is zero.
         */
         
       
-    }
+    
     
 }
