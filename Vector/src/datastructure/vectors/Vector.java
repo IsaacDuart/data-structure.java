@@ -74,6 +74,21 @@ public class Vector {
         return this.elements[position];
         
     }
+    
+    public int search(String element){
+        for(int i = 0; i < this.size; i++){
+            if(this.elements[i].equals(element)){
+                return i;
+            } return -1;
+        }
+        return 0;
+    }
+    
+    /* 
+    This method can reads every element in elements vector
+    and if the element is equal to the elements in i position
+    it will inform wich position it is;
+    */
         
       
     
