@@ -42,6 +42,31 @@ public class Vector {
         position. Size starts at 0 because the vector first
         position is zero.
         */
+
+    public int getSize() {
+        return this.size;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+        s.append("[");
+        
+        for(int i = 0; i < this.size-1; i++){
+            s.append(this.elements[i]);
+            s.append(", ");
+        }
+        
+        if(this.size >0){
+            s.append(this.elements[this.size-1]);
+        }
+        
+        s.append("]");
+        
+        return s.toString();
+    }
+    
+    
         
       
     
